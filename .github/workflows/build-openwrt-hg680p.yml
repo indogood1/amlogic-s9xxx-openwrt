@@ -146,7 +146,7 @@ jobs:
 
           # === Passwall / Proxy (from your good image) ===
           CONFIG_PACKAGE_luci-app-passwall=y
-          CONFIG_PACKAGE_luci-app-openclash=y
+          # CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_xray-core=y
           CONFIG_PACKAGE_dns2socks=y
           CONFIG_PACKAGE_dns2tcp=y
@@ -316,7 +316,7 @@ jobs:
             - **Built**: ${{ env.BUILD_DATE }}
 
             ### What's included (matching your good image)
-            - OpenClash (${{ env.LUCI_APP_OPENCLASH || 'latest' }}) + Xray core
+            # - OpenClash (${{ env.LUCI_APP_OPENCLASH || 'latest' }}) + Xray core
             - PassWall
             - ZeroTier
             - brcmfmac WiFi (internal SDIO) + rtl8188fu (USB dongle)
