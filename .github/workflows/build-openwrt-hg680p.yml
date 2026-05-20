@@ -89,8 +89,6 @@ jobs:
           # Add passwall feed (from your good image: luci-app-passwall 4.71-1)
           echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >> feeds.conf.default
           echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' >> feeds.conf.default
-          # Add openclash feed (from your good image: luci-app-openclash 0.45.78-beta)
-          # echo 'src-git openclash https://github.com/vernesong/OpenClash' >> feeds.conf.default
           # Zerotier is already in OpenWrt official feeds
 
           ./scripts/feeds update -a
@@ -146,7 +144,6 @@ jobs:
 
           # === Passwall / Proxy (from your good image) ===
           CONFIG_PACKAGE_luci-app-passwall=y
-          # CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_xray-core=y
           CONFIG_PACKAGE_dns2socks=y
           CONFIG_PACKAGE_dns2tcp=y
